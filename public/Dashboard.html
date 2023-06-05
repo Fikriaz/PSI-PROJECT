@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../src/output.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+</head>
+
+<body class="bg-white  font-[Poppins]">
+  <header>
+    <span class="absolute text-white text-4xl top-5 left-4 cursor-pointer" onclick="Openbar()">
+      <i class="bi bi-filter-left px-2 bg-gray-900 rounded-md"></i>
+    </span>
+    <div class="sidebar fixed top-0 bottom-0 lg:left-0 left-[-300px] duration-1000
+      p-2 w-[300px] overflow-y-auto text-center bg-white shadow-2xl h-screen">
+      <div class="text-black text-xl">
+        
+        <!-- nutup svg -->
+        <div class="p-2.5 mt-1 flex items-center rounded-md ">
+          
+         <h1  class=" text-[#E62029] items-center align-middle text-4xl ml-3  font-bold py-2">My<span class=" text-[#006CB7]">SPBU</span></h1>
+          <div class="ml-20 cursor-pointer lg:hidden" onclick="Openbar()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+              <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-1.72 6.97a.75.75 0 10-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 101.06 1.06L12 13.06l1.72 1.72a.75.75 0 101.06-1.06L13.06 12l1.72-1.72a.75.75 0 10-1.06-1.06L12 10.94l-1.72-1.72z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          
+        </div>
+        <hr class="my-2 text-black">
+       <!-- Dashboard -->
+        <div>
+          <a href="../public/sidebar.html">
+          <div class="p-2.5 mt-2 flex items-center  rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
+            <div class="px-1 py-1 flex flex-row">
+               <img  src="../img/dashboard.png" class="w-7 mr-4">
+               <span class="text-[15px] ml-2 text-black">Dashboard</span>
+             </div>
+            
+          </div>
+         <!-- Transaksi -->
+          <div class="p-2.5 mt-2 flex items-center  rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
+            <div class="px-1 py-1 flex flex-row">
+               <img  src="../img/transaction.png" class="w-7 mr-4">
+               <span class="text-[15px] ml-2 text-black">Transaksi</span>
+             </div>
+            
+          </div>
+
+         <!-- Keuntungan -->
+         <div class="p-2.5 mt-2 flex items-center  rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
+          <div class="px-1 py-1 flex flex-row">
+             <img  src="../img/money-bag.png" class="w-7 mr-4">
+             <span class="text-[15px] ml-2 text-black">Keuntungan</span>
+           </div>
+          
+        </div>
+
+         <!-- Keuntungan -->
+
+          </a>
+          <!-- Grafik -->
+          <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
+          <div class="ml-2"></div>
+            <img src="../img/bars.png" class="w-7">
+            <div class="flex justify-between w-full items-center" onclick="dropDown()">
+              <span class="text-[15px] ml-4 text-black">Grafik</span>
+              <span class="text-sm rotate-180" id="arrow">
+                <i class="bi bi-chevron-down"></i>
+              </span>
+            </div>
+          </div>
+          <div class=" leading-7 text-left text-sm  mt-2 w-4/5 mx-auto" id="submenu">
+            <div class="p-2.5  flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
+              <img src="../img/gas-cylinder.png" class="w-7 mr-4">
+              <span class="text-[15px] ml-2 text-black">BBM Terjual</span>
+            </div>
+            <div class="p-2.5  flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
+              <img src="../img/financial-profit.png" class="w-7 mr-4">
+              <span class="text-[15px] ml-4 text-black">Keuntungan Perbulan</span>
+            </div>
+           </div>
+
+        
+
+
+           <!-- Info -->
+          <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
+            <div class="ml-2 "></div>
+            <img src="../img/info.png" class="w-7">
+            <div class="flex justify-between w-full items-center" onclick="dropDown2()">
+              <span class="text-[15px] ml-4  text-black">Info</span>
+              <span class="text-sm rotate-180" id="arrow2">
+                <i class="bi bi-chevron-down"></i>
+              </span>
+            </div>
+          </div>
+          <div class=" leading-7 text-left text-sm  mt-2 w-4/5 mx-auto" id="submenu2">
+            <div class="p-2.5  flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
+              <img src="../img/placeholder (3).png" class="w-7 mr-4">
+              <span class="text-[15px] ml-2 text-black">Peta Sebaran</span>
+            </div>
+            <div class="p-2.5  flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
+              <img src="../img/oil-bottle.png" class="w-7 mr-4">
+              <span class="text-[15px] ml-2 text-black">Harga Baru BBM</span>
+            </div>
+           </div>
+         
+      </div>
+    </div>
+  </header>
+  <main class="lg:ml-80 max-sm:w-full mx-auto  max-md:w-full  xl:w-full xxl:w-full ">
+  
+    <div class="w-fuLL px-3 lg:w-5/12 lg:flex-none">
+     
+      <div class="relative h-full overflow-hidden bg-cover rounded-xl" style="background-image: url(../img/radarsih.png)">
+        
+        <div class="relative z-10 flex flex-col flex-auto h-full p-4">
+         
+        
+        
+        </div>
+    </div>
+  </div>    
+
+    </div>
+
+
+ <!-- ini div container ygy -->
+   </div>
+
+
+  
+   
+  </main>
+ 
+    <!-- ini javascript sidebar -->
+ <script>
+    function dropDown() {
+      document.querySelector('#submenu').classList.toggle('hidden')
+      document.querySelector('#arrow').classList.toggle('rotate-0')
+    }
+    dropDown()
+
+    function Openbar() {
+      document.querySelector('.sidebar').classList.toggle('left-[-300px]')
+    }
+// Panggil fungsi Openbar() saat halaman web dimuat
+    window.addEventListener('load', Openbar);
+  </script>
+
+ <!-- ini javascript sidebar -->
+ <script>
+   function dropDown2() {
+     document.querySelector('#submenu2').classList.toggle('hidden')
+     document.querySelector('#arrow2').classList.toggle('rotate-0')
+   }
+   dropDown2()
+
+ 
+ </script>
+
+<script src="../carouseldash.js"></script>
+</body>
+
+</html>
